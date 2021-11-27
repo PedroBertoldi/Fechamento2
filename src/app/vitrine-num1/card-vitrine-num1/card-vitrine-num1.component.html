@@ -1,0 +1,18 @@
+<mat-card *ngIf="podeExibir()" class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{nomeProduto}}</mat-card-title>
+      <mat-card-subtitle *ngIf="categorias.length > 0">{{categorias.join(', ')}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="imgSrc" alt="image">
+    <mat-card-content>
+      <p>
+        {{preco | currency:'BRL':'R$ '}}<br>
+        {{descricao}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button *ngIf="podeComprar" mat-stroked-button (click)="clickComprar.emit()">Mais informações</button>
+      <button *ngIf="podeCompartilhar" mat-button (click)="clickCompartilhar.emit()"><mat-icon>share</mat-icon></button>
+      <button *ngIf="podeAlerta" mat-button (click)="clickAlerta.emit()"><mat-icon>notifications</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>

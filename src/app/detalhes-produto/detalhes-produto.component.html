@@ -1,0 +1,38 @@
+<div class="centralizado">
+  <mat-card *ngIf="produto" class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{produto.nome}}</mat-card-title>
+      <mat-card-subtitle *ngIf="produto.categorias.length > 0">{{produto.categorias.join(', ')}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="produto.imagem" alt="image">
+    <mat-card-content>
+      <p>
+        <button mat-raised-button color="accent">Comprar por {{produto.preco | currency:'BRL':'R$ '}}</button><br>
+        {{produto.descricao}}
+      </p>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="comentarios">
+  <h3 class="titulo">Comentarios</h3>
+  <div class="centralizado-semcor"*ngIf="produto?.comentarios?.length == 0">
+    <mat-card class="example-card-comment">
+      <mat-card-content>
+        <p>Nada por aqui, seja o primeiro!</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngFor="let item of produto!.comentarios" class="centralizado-semcor">
+    <mat-card class="example-card-comment">
+      <mat-card-header>
+        <mat-card-title>{{item.user}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{item.comment}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

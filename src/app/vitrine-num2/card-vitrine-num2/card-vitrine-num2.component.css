@@ -1,0 +1,16 @@
+.example-card {
+    width: 40%;
+    min-width: 300px;
+    margin: 32px 32px 0px 32px;
+    border-radius: 8px;
+}
+.example-card img{
+    border-radius: 8px;
+}
+
+.centralizado-semcor{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+}

@@ -1,0 +1,25 @@
+<div class="centralizado-semcor">
+    <mat-card class="example-card" *ngIf="podeExibir()">
+        <mat-card-title-group>
+            <mat-card-title>{{nomeProduto}}</mat-card-title>
+            <mat-card-subtitle *ngIf="categorias.length > 0">{{categorias.join(', ')}}</mat-card-subtitle>
+            <img mat-card-lg-image [src]="imgSrc">
+        </mat-card-title-group>
+        <mat-card-content>
+            <p>
+                {{preco | currency:'BRL':'R$ '}}<br>
+                {{descricao}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button *ngIf="podeComprar" mat-stroked-button (click)="clickComprar.emit()">Mais informações</button>
+            <button *ngIf="podeCompartilhar" mat-button (click)="clickCompartilhar.emit()">
+                <mat-icon>share</mat-icon>
+            </button>
+            <button *ngIf="podeAlerta" mat-button (click)="clickAlerta.emit()">
+                <mat-icon>notifications</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+

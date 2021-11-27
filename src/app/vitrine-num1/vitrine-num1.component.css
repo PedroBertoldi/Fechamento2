@@ -1,0 +1,12 @@
+.vitrine{
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.coluna{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}

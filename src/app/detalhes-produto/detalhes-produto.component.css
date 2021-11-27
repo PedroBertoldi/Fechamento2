@@ -1,0 +1,48 @@
+mat-card{
+    margin: 24px;
+    border-radius: 8px;
+}
+.titulo{
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: white;
+}
+mat-card span{
+    text-decoration: underline white;
+}
+mat-card button{
+    margin-left: 0px;
+    margin-bottom: 4px;
+}
+.example-card{
+    width: 30%;
+    margin: 16px;
+    border-radius: 8px;
+}
+.example-card-comment{
+    width: 50%;
+    margin: 8px 16px 8px 16px;
+    border-radius: 8px;
+    background-color: #70706f;
+}
+.centralizado{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    background-color: #233240;
+}
+.comentarios{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: #364959;
+}
+.centralizado-semcor{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+}

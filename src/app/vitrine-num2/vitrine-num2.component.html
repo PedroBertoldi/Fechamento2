@@ -1,0 +1,7 @@
+<div class="vitrine">
+    <div *ngFor="let item of items">
+        <app-card-vitrine-num2 class="vitrine2" [nomeProduto]="item.nome" [descricao]="item.descricao" [categorias]="item.categorias"
+        [imgSrc]="item.imagem" [preco]="item.preco" (clickCompartilhar)="compartilhar()" (clickAlerta)="alerta()" (clickComprar)="navegar(item)">
+        </app-card-vitrine-num2>
+    </div>
+</div>
